@@ -5,7 +5,7 @@ import (
 
 	builder_facets "design_patterns/builder/facets"
 	builder_parameter "design_patterns/builder/parameter"
-	intrusive_visitor "design_patterns/visitor"
+	intrusive_visitor "design_patterns/visitor/intrusive"
 )
 
 func main() {
