@@ -1,4 +1,4 @@
-package main
+package builder_parameter
 
 import "strings"
 
@@ -34,7 +34,6 @@ func (b *EmailBuilder) Body(body string) *EmailBuilder {
 }
 
 func sendEmailImpl(email *email) {
-
 }
 
 type build func(*EmailBuilder)
@@ -45,7 +44,7 @@ func SendEmail(action build) {
 	sendEmailImpl(&builder.email)
 }
 
-func main() {
+func Run() {
 	SendEmail(func(b *EmailBuilder) {
 		b.From("foo@bar.com").
 			To("bar@baz.com").
