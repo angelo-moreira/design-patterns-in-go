@@ -6,6 +6,7 @@ import (
 	builder_facets "design_patterns/builder/facets"
 	builder_parameter "design_patterns/builder/parameter"
 	state_classic "design_patterns/state/classic"
+	state_handmade "design_patterns/state/handmade"
 	classic_visitor "design_patterns/visitor/classic"
 	intrusive_visitor "design_patterns/visitor/intrusive"
 	reflective_visitor "design_patterns/visitor/reflective"
@@ -29,4 +30,7 @@ func main() {
 
 	fmt.Println("======CLASSIC STATE=====")
 	state_classic.Run()
+
+	fmt.Println("======HANDMADE STATE=====")
+	state_handmade.Run()
 }
