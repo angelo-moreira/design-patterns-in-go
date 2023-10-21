@@ -1,4 +1,4 @@
-package reflective_visitor
+package main
 
 import (
 	"fmt"
@@ -30,7 +30,7 @@ func Print(e Expression, sb *strings.Builder) {
 }
 
 // 1 + (2+3)
-func Run() string {
+func main() {
 	e := &AdditionExpression{
 		left: &DoubleExpression{1},
 		right: &AdditionExpression{
@@ -42,5 +42,5 @@ func Run() string {
 	sb := strings.Builder{}
 	Print(e, &sb)
 
-	return sb.String()
+	fmt.Println(sb.String())
 }

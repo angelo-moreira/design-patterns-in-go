@@ -1,4 +1,4 @@
-package state_handmade
+package main
 
 import (
 	"bufio"
@@ -87,7 +87,7 @@ var rules = map[State][]TriggerResult{
 	},
 }
 
-func Run() {
+func main() {
 	state, exitState := OffHook, OnHook
 	for ok := true; ok; ok = state != exitState {
 		fmt.Println("The phone is currently", state)

@@ -1,4 +1,4 @@
-package state_classic
+package main
 
 import "fmt"
 
@@ -61,7 +61,7 @@ func NewOffState() *OffState {
 	return &OffState{BaseState{}}
 }
 
-func Run() {
+func main() {
 	sw := NewSwitch()
 	sw.On()
 	sw.Off()

@@ -1,4 +1,6 @@
-package builder_facets
+package main
+
+import "fmt"
 
 type Person struct {
 	StreetAddress, Postcode, City string
@@ -65,7 +67,7 @@ func NewPersonBuilder() *PersonBuilder {
 	return &PersonBuilder{&Person{}}
 }
 
-func Run() *Person {
+func main() {
 	pb := NewPersonBuilder()
 	pb.
 		Lives().
@@ -78,5 +80,5 @@ func Run() *Person {
 		Earning(123000)
 
 	person := pb.Build()
-	return person
+	fmt.Println(person)
 }

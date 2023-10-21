@@ -1,4 +1,4 @@
-package intrusive_visitor
+package main
 
 import (
 	"fmt"
@@ -30,7 +30,7 @@ func (a *AdditionExpression) Print(sb *strings.Builder) {
 }
 
 // 1 + (2+3)
-func Run() string {
+func main() {
 	e := &AdditionExpression{
 		left: &DoubleExpression{1},
 		right: &AdditionExpression{
@@ -42,5 +42,5 @@ func Run() string {
 	sb := strings.Builder{}
 	e.Print(&sb)
 
-	return sb.String()
+	fmt.Println(sb.String())
 }

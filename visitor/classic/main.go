@@ -1,4 +1,4 @@
-package classic_visitor
+package main
 
 import (
 	"fmt"
@@ -73,7 +73,7 @@ func (ee *ExpressionEvaluator) VisitAdditionExpression(e *AdditionExpression) {
 }
 
 // 1 + (2+3)
-func Run() string {
+func main() {
 	e := &AdditionExpression{
 		left: &DoubleExpression{1},
 		right: &AdditionExpression{
@@ -88,5 +88,5 @@ func Run() string {
 	ee := &ExpressionEvaluator{}
 	e.Accept(ee)
 
-	return fmt.Sprintf("%s = %g", ep.String(), ee.result)
+	fmt.Println(fmt.Sprintf("%s = %g", ep.String(), ee.result))
 }
